@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+
+<body>
+
+    <button class="back-button" onclick="goBack('index.html')">Back</button>
+
+    <h1>CMD Hospital - Patient Dashboard</h1>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h2>Profile</h2>
+            <p>Name: <span id="profileName">Patient</span></p>
+            <p>Patient ID: <span id="profilePatientId">-</span></p>
+        </div>
+
+        <div class="card">
+            <h2>Upcoming Appointment</h2>
+            <p id="upcomingAppointment">No Appointment</p>
+        </div>
+
+        <div class="card">
+            <h2>Appointment Count</h2>
+            <p id="appointmentCount">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Notifications</h2>
+            <p id="notification">
+                No New Notifications
+            </p>
+        </div>
+
+        <div class="card emergency-card">
+            <h2>Emergency Booking</h2>
+
+            <button onclick="emergencyBooking()">
+                Emergency Request
+            </button>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>Book Appointment</h2>
+
+    <form id="appointmentForm">
+
+        <label>Department</label>
+
+        <select id="department">
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Orthopedics</option>
+            <option>Dermatology</option>
+        </select>
+
+        <label>Doctor</label>
+
+        <select id="doctor">
+            <option>Dr Kumar</option>
+            <option>Dr Priya</option>
+            <option>Dr Raj</option>
+        </select>
+
+        <label>Patient Name</label>
+
+        <input type="text" id="patientName" placeholder="Enter Patient Name" required>
+
+        <label>Patient ID</label>
+
+        <input type="text" id="patientId" placeholder="Enter Patient ID">
+
+        <label>Email</label>
+
+        <input type="email" id="patientEmail" placeholder="Enter Email (Optional)">
+
+        <label>Phone Number</label>
+
+        <input type="tel" id="patientPhone" placeholder="Enter Phone Number" required>
+
+        <label>Date</label>
+
+        <input type="date" id="date" required>
+
+        <label>Time</label>
+
+        <input type="time" id="time" required>
+
+        <label>Reason</label>
+
+        <textarea id="reason" placeholder="Enter Reason" required>
+    </textarea>
+
+        <button type="submit">
+            Book Appointment
+        </button>
+
+    </form>
+
+    <hr>
+
+    <h2>Appointment History</h2>
+
+    <div id="appointmentHistory"></div>
+
+    <hr>
+
+    <h2>Patient Notifications</h2>
+
+    <input type="email" id="notificationEmail" placeholder="Enter Email">
+
+    <input type="tel" id="notificationPhone" placeholder="Enter Phone Number">
+
+    <input type="text" id="notificationPatientId" placeholder="Enter Patient ID">
+
+    <button onclick="loadPatientNotifications()">
+        Load Notifications
+    </button>
+
+    <div id="patientNotifications"></div>
+
+    <hr>
+    <h2>Upload Report</h2>
+
+    <div class="report-form">
+        <input type="text" id="uploadPatientId" placeholder="Enter Patient ID">
+
+        <input type="text" id="uploadReportName" placeholder="Report Name">
+
+        <input type="file" id="uploadReportFile">
+
+        <button onclick="uploadPatientReport()">
+            Upload Report
+        </button>
+
+        <p id="patientUploadMsg"></p>
+    </div>
+
+    <hr>
+    <h2>View Reports</h2>
+
+    <input type="text" id="searchPatient" placeholder="Enter Patient ID">
+
+    <button onclick="loadPatientReports()">
+        Search
+    </button>
+
+    <div id="patientReports"></div>
+    <script src="back.js"></script>
+    <script src="patient.js"></script>
+
+</body>
+
+</html>

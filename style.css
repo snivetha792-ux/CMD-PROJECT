@@ -1,0 +1,79 @@
+body {
+    font-family: Arial;
+    background: #daeaee;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+.container {
+    background: white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    background: #1E3A8A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 2000;
+    width: auto;
+    border-radius: 5px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+}
+
+.red {
+    background: red;
+}
+
+.section {
+    display: none;
+}
+backgroun-image{
+
+
+min-height: 100vh;
+    background:
+        linear-gradient(rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0)),
+        url("CMD.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* body{
+    background-image:url("back.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+} */

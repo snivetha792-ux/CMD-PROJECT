@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admain.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<button class="back-button" onclick="goBack('index.html')">Back</button>
+
+<div class="navbar">
+    <h1>CMD Hospital - Admin Dashboard</h1>
+</div>
+
+<!-- Statistics Cards -->
+
+<div class="card-container">
+
+    <div class="card">
+        <h2>Total Patients</h2>
+        <p id="totalPatients">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Doctors</h2>
+        <p id="totalDoctors">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Appointments</h2>
+        <p id="totalAppointments">0</p>
+    </div>
+
+    <div class="card emergency">
+        <h2>Emergency Requests</h2>
+        <p id="emergencyRequests">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Today Appointments</h2>
+        <p id="dailyAppointments">0</p>
+    </div>
+
+    <div class="card">
+        <h2>This Week Appointments</h2>
+        <p id="weeklyAppointments">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Reports</h2>
+        <p id="totalReports">0</p>
+    </div>
+
+    <div class="card">
+        <h2>Total Notifications</h2>
+        <p id="totalNotifications">0</p>
+    </div>
+
+</div>
+
+<!-- Appointments Chart -->
+
+<div class="chart-box">
+    <h2>Appointments Per Day</h2>
+    <canvas id="appointmentChart"></canvas>
+</div>
+
+<!-- Department Chart -->
+
+<div class="chart-box">
+    <h2>Department Appointment Bookings</h2>
+    <canvas id="departmentChart"></canvas>
+</div>
+
+<div class="chart-box">
+    <h2>Appointment Table</h2>
+    <div id="adminAppointments"></div>
+</div>
+
+<div class="chart-box">
+    <h2>All Notifications</h2>
+    <button onclick="loadAdminNotifications()">
+        Load Notifications
+    </button>
+    <div id="adminNotifications"></div>
+</div>
+
+<div class="chart-box">
+    <h2>All Reports</h2>
+    <button onclick="loadAdminReports()">
+        Load Reports
+    </button>
+    <div id="adminReports"></div>
+</div>
+
+<script src="back.js"></script>
+<script src="admain.js"></script>
+
+</body>
+</html>

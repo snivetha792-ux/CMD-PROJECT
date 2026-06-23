@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+
+<body>
+
+    <button class="back-button" onclick="goBack('index.html')">Back</button>
+
+    <div class="navbar">
+        <h1>CMD Hospital - Staff Dashboard</h1>
+    </div>
+
+    <div class="container">
+
+        
+
+        <!-- Medicine Stock Card -->
+        <div class="card">
+
+            <h2>Medicine Stock</h2>
+
+            <table>
+                <tr>
+                    <th>Medicine</th>
+                    <th>Stock</th>
+                </tr>
+
+                <tr>
+                    <td>Paracetamol</td>
+                    <td>
+                        <input type="number" value="100">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Amoxicillin</td>
+                    <td>
+                        <input type="number" value="50">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Dolo 650</td>
+                    <td>
+                        <input type="number" value="75">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <button onclick="updateStock()">
+                Update Stock
+            </button>
+
+            <p id="stockMsg"></p>
+
+        </div>
+
+        <!-- Schedule Card -->
+        <div class="card">
+
+            <h2>Manage Schedule</h2>
+
+            <label>Schedule Date</label>
+
+            <input type="date">
+            <br>
+            <br>
+            <label>Schedule Time</label>
+
+            <input type="time">
+
+            <button onclick="saveSchedule()">
+                Save Schedule
+            </button>
+
+            <p id="scheduleMsg"></p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Emergency Notifications</h2>
+
+            <button onclick="loadStaffNotifications()">
+                Load Notifications
+            </button>
+
+            <div id="staffNotifications"></div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Upload Patient Report</h2>
+
+        <input type="text" id="patientId" placeholder="Patient ID">
+
+        <input type="text" id="reportName" placeholder="Report Name">
+
+        <input type="file" id="patientReportFile">
+
+        <button onclick="uploadReport()">
+            Upload Report
+        </button>
+    </div>
+
+    <script src="back.js"></script>
+    <script src="staff.js"></script>
+
+</body>
+
+</html>

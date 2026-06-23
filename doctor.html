@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+
+    <button class="back-button" onclick="goBack('index.html')">Back</button>
+
+    <h1>Doctor Dashboard</h1>
+
+    <div id="doctorDetails" class="doctor-details"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Approve</th>
+                <th>Reject</th>
+            </tr>
+        </thead>
+
+        <tbody id="appointmentTableBody"></tbody>
+    </table>
+
+    <p id="message"></p>
+
+    <section class="dashboard-grid">
+        <div class="dashboard-card">
+            <div class="card-header">
+                <h2>Emergency Notifications</h2>
+                <button onclick="loadDoctorNotifications()">Load</button>
+            </div>
+            <div id="doctorNotifications" class="card-list"></div>
+        </div>
+
+        <div class="dashboard-card">
+            <div class="card-header">
+                <h2>Doctor Report Viewer</h2>
+            </div>
+
+            <div class="search-row">
+                <input type="text" id="doctorPatientId" placeholder="Patient ID">
+                <button onclick="doctorViewReports()">Search</button>
+            </div>
+
+            <div id="doctorReports" class="card-list"></div>
+        </div>
+    </section>
+
+    <script src="back.js"></script>
+    <script src="doctor.js"></script>
+
+</body>
+
+</html>

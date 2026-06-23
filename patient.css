@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1E3A8A;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px lightgray;
+    text-align: center;
+}
+
+.emergency-card {
+    border-left: 6px solid red;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px lightgray;
+}
+
+.report-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px lightgray;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 2000;
+    width: auto;
+}
+ 
+ .report-card{
+
+    background:white;
+
+    padding:15px;
+
+    margin:10px;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 0 10px lightgray;
+}
+
+input{
+
+    width:300px;
+
+    padding:10px;
+
+    margin:10px;
+}
+
+button{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+a{
+
+    text-decoration:none;
+
+    color:green;
+
+    font-weight:bold;
+}

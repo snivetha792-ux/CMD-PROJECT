@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>CMD Hospital</title>
+    <link rel="icon" href="icon.jpg">
+</head>
+
+<body>
+
+    <button class="back-button" onclick="goBack('home.html')">Back</button>
+
+    <div class="container">
+
+        <img src="icon.jpg" class="logo">
+
+        <h1>CMD Hospital</h1>
+
+        <h2>Login</h2>
+
+        <input id="loginEmail" type="text" placeholder="Email or Patient ID">
+
+        <input id="loginPassword" type="password" placeholder="Password" required>
+
+        <select id="role">
+            <option>Patient</option>
+            <option>Doctor</option>
+            <option>Staff</option>
+            <option>Admin</option>
+        </select>
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <p>
+            New User?
+            <a href="register.html">
+                Register Here
+            </a>
+        </p>
+
+    </div>
+
+    <script src="back.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
