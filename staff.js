@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:5000";
-
+const API_URL = "https://cmd-project.onrender.com";
 function quickUploadReport() {
 
     let file =
@@ -29,24 +28,24 @@ function saveSchedule() {
         "✅ Schedule Saved Successfully";
 }
 
-async function uploadReport(){
+async function uploadReport() {
 
     let patientId =
-    document.getElementById("patientId").value;
+        document.getElementById("patientId").value;
 
     let reportName =
-    document.getElementById("reportName").value;
+        document.getElementById("reportName").value;
 
     let file =
-    document.getElementById("patientReportFile")
-    .files[0];
+        document.getElementById("patientReportFile")
+            .files[0];
 
-    if(!patientId || !reportName){
+    if (!patientId || !reportName) {
         alert("Enter Patient ID and Report Name");
         return;
     }
 
-    if(!file){
+    if (!file) {
         alert("Select File");
         return;
     }

@@ -1,7 +1,6 @@
 // Appointment Form
 
-const API_URL = "http://localhost:5000";
-
+const API_URL = "https://cmd-project.onrender.com";
 function getLoggedInPatient() {
     return JSON.parse(localStorage.getItem("loggedInPatient") || "null");
 }

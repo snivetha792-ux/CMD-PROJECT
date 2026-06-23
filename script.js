@@ -1,37 +1,37 @@
-function updateStock(){
+function updateStock() {
 
     let medicine =
-    document.getElementById("medicine").value;
+        document.getElementById("medicine").value;
 
     let qty =
-    document.getElementById("stockQty").value;
+        document.getElementById("stockQty").value;
 
-    if(qty === ""){
+    if (qty === "") {
         alert("Enter Stock Quantity");
         return;
     }
 
-    if(medicine === "Paracetamol"){
+    if (medicine === "Paracetamol") {
         document.getElementById("para").innerHTML = qty;
     }
 
-    else if(medicine === "Dolo"){
+    else if (medicine === "Dolo") {
         document.getElementById("dolo").innerHTML = qty;
     }
 
-    else if(medicine === "Syringe"){
+    else if (medicine === "Syringe") {
         document.getElementById("syringe").innerHTML = qty;
     }
 
-    else{
+    else {
         document.getElementById("glucose").innerHTML = qty;
     }
 
     document.getElementById("message").innerHTML =
-    "✅ Stock Updated Successfully!";
+        "✅ Stock Updated Successfully!";
 }
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://cmd-project.onrender.com";
 
 async function login() {
     let role = document.getElementById("role").value;

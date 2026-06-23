@@ -42,8 +42,7 @@ node server.js
 4. Open the app:
 
 ```text
-http://localhost:5000
-```
+https://cmd-project.onrender.com
 
 ## Login Flow
 

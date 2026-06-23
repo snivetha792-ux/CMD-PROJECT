@@ -1,5 +1,4 @@
-const API_URL = "http://localhost:5000";
-
+const API_URL = "https://cmd-project.onrender.com";
 const appointmentChart = new Chart(
     document.getElementById("appointmentChart"),
     {

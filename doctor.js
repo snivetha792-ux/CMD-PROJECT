@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://cmd-project.onrender.com";
 
 function loadDoctorDetails() {
     const doctor = JSON.parse(localStorage.getItem("loggedInDoctor") || "null");
@@ -126,12 +126,12 @@ function rejectAppointment(id) {
     document.getElementById("message").innerHTML =
         "❌ Appointment Rejected!";
 }
-async function doctorViewReports(){
+async function doctorViewReports() {
 
     let patientId =
-    document.getElementById(
-    "doctorPatientId"
-    ).value;
+        document.getElementById(
+            "doctorPatientId"
+        ).value;
 
     if (!patientId) {
         alert("Enter Patient ID");
@@ -142,18 +142,17 @@ async function doctorViewReports(){
         const response = await fetch(`${API_URL}/api/reports/${patientId}`);
         const reports = await response.json();
 
-        let html="";
+        let html = "";
 
-        reports.forEach(report=>{
+        reports.forEach(report => {
             const isImage = report.fileType && report.fileType.startsWith("image/");
 
             html += `
 
             <div class="report-card">
-                ${
-                    isImage
-                        ? `<img class="report-preview" src="${report.filePath}" alt="${report.reportName}">`
-                        : `<div class="report-preview report-file-preview">${report.fileType || "Report File"}</div>`
+                ${isImage
+                    ? `<img class="report-preview" src="${report.filePath}" alt="${report.reportName}">`
+                    : `<div class="report-preview report-file-preview">${report.fileType || "Report File"}</div>`
                 }
 
                 <h3>
@@ -188,11 +187,11 @@ async function doctorViewReports(){
         });
 
         document.getElementById(
-        "doctorReports"
+            "doctorReports"
         ).innerHTML = html || "No reports found";
     } catch (error) {
         document.getElementById(
-        "doctorReports"
+            "doctorReports"
         ).innerHTML = "Backend server is not connected";
     }
 }

@@ -179,18 +179,18 @@ app.post("/api/doctors/login", async (req, res) => {
             await doctor.save();
         } else {
             doctor = await Doctor.findOneAndUpdate(
-            { email: normalizedEmail },
-            {
-                $set: {
-                    email: normalizedEmail,
-                    password,
-                    lastLoginAt: new Date()
+                { email: normalizedEmail },
+                {
+                    $set: {
+                        email: normalizedEmail,
+                        password,
+                        lastLoginAt: new Date()
+                    },
+                    $inc: { loginCount: 1 }
                 },
-                $inc: { loginCount: 1 }
-            },
-            {
-                new: true
-            }
+                {
+                    new: true
+                }
             );
         }
 
