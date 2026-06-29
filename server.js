@@ -5,6 +5,12 @@ const multer = require("multer");
 const path = require("path");
 require("dotenv").config();
 
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log("MongoDB Connected"))
+    .catch(err => console.log(err));
+
 const app = express();
 const Patient = require("./models/Patient");
 const Appointment = require("./models/Appointment");
